@@ -1,7 +1,7 @@
 .testimonials--slider {
   position: relative;
   width: 100%;
-  max-width: 840px;
+  max-width: 85.3rem;
   overflow: hidden;
   border-radius: 10px;
   margin: 0 auto;
@@ -15,10 +15,16 @@
 }
 
 .testimonials--slider .dots .dot {
-  width: 1rem;
-  height: 1rem;
-  background-color: #3d3d3d;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: transparent;
+  border: 2px solid var(--color-accent);
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.testimonials--slider .dots .dot.active {
+  background-color: var(--color-primary);
 }
 
 
@@ -37,14 +43,18 @@
 }
 
 .slide--contents {
-  background-color: #F8F1F1;
-  border-bottom: 5px solid #8445EE;
+  background-color: var(--color-primary-light);
+  border-bottom: 5px solid var(--color-primary);
   text-align: center;
   padding: 5rem;
 }
 
-.slide--contents > * {
-  margin-bottom: 2rem;
+.slide--contents > *:not(.start-rating, .author, .cite) {
+  margin-bottom: 3rem;
+}
+
+.slide--contents > *:is(.start-rating, .author, .cite) {
+  margin-bottom: 0.8rem;
 }
 
 .slide--contents .start-rating {
