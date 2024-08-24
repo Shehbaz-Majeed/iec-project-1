@@ -679,7 +679,7 @@ h6, .h6 {
   text-decoration: none;
   background: linear-gradient(150deg, var(--color-primary), var(--color-secondary));
   border-radius: 3rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
