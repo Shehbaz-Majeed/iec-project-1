@@ -94,3 +94,9 @@ header {
   text-decoration: none;
   color: var(--color-light);
 }
+
+@media screen and (max-width: 749px) {
+  nav:has(.nav_list) {
+    display: none;
+  }
+}
