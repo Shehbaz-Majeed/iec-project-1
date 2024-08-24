@@ -1,0 +1,24 @@
+.footer--bottom-bar {
+  border-top: 0.1rem solid rgb(var(--color-border));
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+  text-align: center;
+}
+
+.footer--bottom-bar span {
+  line-height: 1.6;
+}
+
+.footer--bottom-bar .accent {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 990px) {
+  .footer--bottom-bar {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}

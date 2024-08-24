@@ -14,6 +14,9 @@
   --color-light: #FFFFFF;
   --color-dark: #000000;
   --color-text: #222222;
+  --color-icon: #222222;
+  --color-background: 255, 255, 255;
+  --color-foreground: 0, 0, 0;
   --color-border: 0, 0, 0;
   --font-body-family: 'Poppins';
   --font-body-weight: 400;
@@ -39,6 +42,8 @@ html {
 body {
   font-size: 1.8rem;
   font-family: var(--font-body-family);
+  color: rgb(var(--color-foreground));
+  background-color: rgb(var(--color-background));
 }
 
 /* typography */
@@ -85,6 +90,19 @@ body {
 .icon svg {
   width: 2rem;
   height: 2rem;
+}
+
+a {
+  color: rgb(var(--color-primary));
+  text-decoration: underline;
+}
+
+a:hover {
+  color: rgb(var(--color-secondary));
+}
+
+a:visited {
+  color: rgb(var(--color-primary));
 }
 
 .h0,
@@ -645,6 +663,12 @@ h6, .h6 {
   }
 }
 
+.page-width--full-width {
+  max-width: 100%;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+}
+
 .section-padding {
   padding-top: var(--section-padding-top);
   padding-bottom: var(--section-padding-bottom);
@@ -753,25 +777,33 @@ h6, .h6 {
 
 /* Styled Lists */
 
-.circle-marked--list {
+.circle-marked--list, 
+.text-icons--list {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-.circle-marked--list > span {
+.circle-marked--list > span, 
+.text-icons--list > a {
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
   width: 100%;
+  text-decoration: none;
 }
 
 .circle-marked--list span svg {
   width: 3.3rem;
   height: 3.3rem;
+}
+
+.text-icons--list a svg {
+  width: 2.6rem;
+  height: 2.6rem;
 }
 
 @media screen and (min-width: 750px) {
