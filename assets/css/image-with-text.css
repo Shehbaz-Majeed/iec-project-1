@@ -1,3 +1,9 @@
+.image-with-text__grid {
+  background: var(--gradient-background);
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+}
+
 .image-with-text__details {
   display: flex;
   flex-direction: column;
