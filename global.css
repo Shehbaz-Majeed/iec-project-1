@@ -5,6 +5,7 @@
 }
 
 :root {
+  /* Colors */
   --section-padding-top: 1rem;
   --section-padding-bottom: 1rem;
   --color-primary: #7209b7;
@@ -18,6 +19,18 @@
   --color-background: 255, 255, 255;
   --color-foreground: 0, 0, 0;
   --color-border: 0, 0, 0;
+
+  /* Buttons Primary */
+  --color-button-pri-label: 255, 255, 255;
+  --color-button-pri-background: 0, 0, 0;
+  --color-button-pri-gradient: linear-gradient(150deg, var(--color-primary), var(--color-secondary));
+  
+  /* Buttons Secondary */
+  --color-button-sec-label: 0, 0, 0;
+  --color-button-sec-background: transparent;
+  --color-button-sec-gradient: transparent;
+
+  /* Fonts */
   --font-body-family: 'Poppins';
   --font-body-weight: 400;
   --font-body-style: normal;
@@ -26,6 +39,14 @@
   --font-heading-weight: 600;
   --font-heading-style: normal;
   --font-heading-lineheight: 1.3;
+}
+
+.dark-theme {
+  --color-primary-light: rgb(49, 49, 58);
+  --color-background: 24, 24, 27;
+  --color-foreground: 208, 214, 224;
+
+  --color-button-sec-label: 255, 255, 255;
 }
 
 @media screen and (min-width: 750px) {
@@ -701,17 +722,18 @@ h6, .h6 {
 .btn:has(> .label-seek) {
   position: relative;
   text-decoration: none;
-  background: linear-gradient(150deg, var(--color-primary), var(--color-secondary));
+  background: var(--color-button-pri-gradient);
+  background-color: rgb(var(--color-button-pri-background));
   border-radius: 3rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  /* border: 0.2rem solid transparent; */
 }
 
 .btn.btn-secondary:has(> .label-seek) {
-  background: transparent;
+  background: var(--color-button-sec-gradient);
+  background-color: var(--color-button-sec-background);
   box-shadow: inset 0 0 0 2px var(--color-primary);
 }
 
@@ -724,17 +746,17 @@ h6, .h6 {
   width: 100%;
   padding: 1.5rem 3rem;
   text-align: center;
-  background: linear-gradient(150deg, var(--color-primary), var(--color-secondary));
+  background: var(--color-button-pri-gradient);
+  background-color: rgb(var(--color-button-pri-background));
   border-radius: 3rem;
-  color: var(--color-light);
+  color: rgb(var(--color-button-pri-label));
   text-decoration: none;
   transition: all 0.3s ease;
-  /* border: 0.2rem solid transparent; */
 }
 
 .btn.color--dark:not(:has(> .label-seek)),
 .btn.color--dark .label, .btn.color--dark .label-seek {
-  color: var(--color-dark);
+  color: rgb(var(--color-button-sec-label));
 }
 
 .btn:has(> .label-seek):hover .label {
@@ -749,9 +771,8 @@ h6, .h6 {
 
 .btn-secondary:not(:has(> .label-seek)),
 .btn:has(> .label-seek) .label, .btn-secondary .label-seek {
-  background: transparent;
-  /* border: 0.2rem solid var(--color-primary); */
-  /* box-shadow: inset 0 0 1px var(--color-primary); */
+  background: var(--color-button-sec-gradient);
+  background-color: var(--color-button-sec-background);
 }
 
 .no--radius {
@@ -764,7 +785,6 @@ h6, .h6 {
 }
 
 /* Colors */
-
 
 .color--light {
   color: var(--color-light);
